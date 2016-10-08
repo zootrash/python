@@ -1,1 +1,16 @@
 # practice some python scripts!
+
+- beautiful soup (pull data from HTML files)
+- django (web framework)
+- networking (implementing protocols)
+- crypto (RSA, cipher breaks)
+- AI
+- games
+- 
+
+# samples
+http://usingpython.com/programs/
+
+https://projecteuler.net/
+
+ 
