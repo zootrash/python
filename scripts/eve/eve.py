@@ -11,6 +11,6 @@
 # libraries
 import time		# time of OS
 
-# vars
-c_time = time.strftime("Today's date is %I:%M:%S")
-print (c_time)
+# date
+__DATE__ = time.strftime("Today's date is %B %d, %Y")
+print (__DATE__)
