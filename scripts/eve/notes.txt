@@ -2,6 +2,7 @@
 
 $ future issues
  - assumes user has python3 installed. Otherwise, need to change header
+ - for python2.x, use raw_input as user input
 
 $ etc
 
