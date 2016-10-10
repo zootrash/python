@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Eve: The personal and mysterious AI
 #
@@ -10,6 +10,9 @@
 
 # libraries
 import time		# time of OS
+
+# get user input
+userinput = input('Yes?\n\n')
 
 # date
 __DATE__ = time.strftime("Today's date is %B %d, %Y")

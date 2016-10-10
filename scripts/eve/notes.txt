@@ -1,0 +1,8 @@
+### notes ###
+
+$ future issues
+ - assumes user has python3 installed. Otherwise, need to change header
+
+$ etc
+
+$ update log
