@@ -11,42 +11,65 @@
 # libraries
 import time		# time of OS
 
-# loop counter
-hello = 1
-
 # date
 __DATE__ = time.strftime("Today's date is %B %d, %Y.")
 
 # time
 __TIME__ = time.strftime("The time is currently %I:%M %p.")
 
-def goodbye(userInput)
-	"Farewell Eve"
-	if "no" in userInput
-		print('Farewell.')
-		return 0
+# counter
+question = 0
 
-def respond(userInput):
-	"Respond to user input"
+# first welcome message from eve
+def welcome():
+  print('Hello, my name is Eve!')
 
-	goodbye(userInput)
+# first and next followups for eve
+def ask(question):
+  if(question):
+    print('Anything else?')
+  else:
+    print('What can I do for you today?')
 
+# return 1 for true
+def setTrue():
+  return 1
+
+# print bye message and return false
+def goodbye():
+  print('Farewell, have a great day!')
+  return False
+
+# exit eve
+def exitEve(userInput):
+  if "no" in userInput:
+    return goodbye()
+  elif "bye" in userInput:
+    return goodbye()
+  else:
+    return True
+
+# check if user wants to exit
+def userExit(userInput):
+  return exitEve(userInput)
+
+# responses for eve
+def eveResponse(userInput):
+  if "date" in userInput:
+    print(__DATE__)
+  elif "time" in userInput:
+    print(__TIME__)
+  else:
+    print('I am unable to reply to your comment.')
 
 # eve loop
-print('Yes?')
-while(hello):
+welcome()
+while(True):
+  ask(question)
+  question = setTrue()
+  userInput = input('\n')
 
-	userInput = input('\n')
-	hello = respond(userInput)
-
-	if(hello == 1):
-		# testing user input
-		if "date" in userInput:
-			print(__DATE__)
-		elif "time" in userInput:
-			print(__TIME__)
-		else:
-			print('I am unable to reply to your comment.')
-
-		print('Anything else?')
-
+  if(userExit(userInput)):
+    eveResponse(userInput)
+  else:
+    quit()
